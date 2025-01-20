@@ -34,7 +34,7 @@ hdfs dfs -put /data/relationships/data.txt /relationships/
 D'abord lancer mvn clean install
 puis copier le jar créer (/target) dans le dossier jars
 ```bash
-hadoop jar /jars/hadoop-tp3-collaborativeFiltering-job1-1.0.jar /relationships/data.txt /output/job1
+hadoop jar /jars/tpfinal-Thomas-PLOIX-job1-1.0.jar /relationships/data.txt /output/job1
 
 ```
 
@@ -49,7 +49,7 @@ hdfs dfs -cat /output/job1/part-r-00001
 D'abord lancer mvn clean install dans le répository hadoop-tp3-collaborativeFiltering-job2
 puis copier le jar crée (/target) dans le dossier jars
 ```bash
-hadoop jar /jars/hadoop-tp3-collaborativeFiltering-job2-1.0.jar /output/job1/part-r-00001 /output/job2
+hadoop jar /jars/tpfinal-Thomas-PLOIX-job2.jar /output/job1/part-r-00001 /output/job2
 
 ```
 
@@ -66,7 +66,7 @@ D'abord lancer mvn clean install dans le répository hadoop-tp3-collaborativeFil
 puis copier le jar crée (/target) dans le dossier jars
 
 ```bash
-hadoop jar /jars/hadoop-tp3-collaborativeFiltering-job3-1.0.jar /output/job2 /output/job3
+hadoop jar /jars/tpfinal-Thomas-PLOIX-job3.jar /output/job2 /output/job3
 
 ```
 
@@ -75,7 +75,9 @@ Résultat du job3
 hdfs dfs -cat /output/job3/part-r-00000
 hdfs dfs -cat /output/job3/part-r-00001
 ```
+
 Exemple de résultat :
+```text
 rachelrobertson 20240924220740(529), chandlerbing(17), adammitchell(10), irenemartin(10), maxtucker(10)
 rebeccamcdonald 20240924220740(182), rachelgreen(15), chandlerbing(12), rossgeller(12), joeytribbiani(9)
 rebeccataylor   20240924220740(277), joeytribbiani(9), mariapaige(8), mattbell(8), sallyquinn(8)
