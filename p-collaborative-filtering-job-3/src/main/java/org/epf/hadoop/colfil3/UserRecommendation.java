@@ -1,6 +1,5 @@
 package org.epf.hadoop.colfil3;
 
-import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
 import java.io.DataInput;
 import java.io.DataOutput;
@@ -12,13 +11,7 @@ public class UserRecommendation implements Writable {
     private int commonFriendCount;
 
 
-    public UserRecommendation() {
-        this.userId = "";
-        this.recomendationFriendId = "";
-        this.commonFriendCount = 0;
-    }
 
-    // Constructeur avec paramètres
     public UserRecommendation(String userId, String recommendedId, int commonFriends) {
         this.userId = userId;
         this.recomendationFriendId = recommendedId;
