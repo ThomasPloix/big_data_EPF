@@ -42,3 +42,19 @@ Résultat du job1
 ```bash
 hdfs dfs -cat /output/job1/part-r-00001
 ```
+
+
+### 7. Lancement du job2
+
+D'abord lancer mvn clean install dans le répository hadoop-tp3-collaborativeFiltering-job2
+puis copier le jar dans le dossier jars
+```bash
+hadoop jar /jars/hadoop-tp3-collaborativeFiltering-job2-1.0.jar /output/job1/part-r-00001 /output/job2
+
+```
+
+Résultat du job2
+```bash
+hdfs dfs -cat /output/job2/part-r-00000
+hdfs dfs -cat /output/job2/part-r-00001
+```
